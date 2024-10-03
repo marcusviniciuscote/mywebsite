@@ -44,7 +44,7 @@ ul {
 .logo {
     display: inline-block;
     color: var(--white);
-    font-size: 60px;
+    font-size: 40px;
     margin-left: 10px;
 }
 
@@ -76,7 +76,7 @@ ul {
 .hamb {
     cursor: pointer;
     float: right;
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 /* Style label tag */
@@ -87,7 +87,6 @@ ul {
     height: 2px;
     position: relative;
     width: 24px;
-
 }
 
 /* Style span tag */
@@ -163,4 +162,11 @@ body:has(.side-menu:checked) {
     .hamb {
         display: none;
     }
+}
+
+img {
+    border-radius: 50%;
+    max-width: 250px;
+    margin-top: 100px;
+    margin-left: 250px;
 }
