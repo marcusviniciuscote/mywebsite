@@ -1,98 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
+:root {
+    --white: #f9f9f9;
+    --black: #111;
+    --gray: #333;
+}
+
+/* variables*/
+
+/* Reset */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 
-body {
-    background-color: #111;
-}
-/* style.css*/
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  nav {
-    background-color: green;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  ul li {
-    margin-right: 20px;
-  }
-  
-  ul li a {
-    color: white;
+a {
     text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  ul li a:hover {
-    color: lightgreen;
-  }
-  
-  .checkbtn {
-    font-size: 30px;
-    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header {
+    background-color: var(--gray);
+    box-shadow: 1px 1px 5px 0px var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+/* Nav menu */
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover {
+    background-color: var(--black);
+}
+
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb {
     cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu {
     display: none;
-  }
-  
-  #check {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .checkbtn {
-      display: block;
-      order: 1;
-      margin-right: 20px;
+}
+
+/* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked~nav {
+    max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+body:has(.side-menu:checked) {
+    overflow: hidden;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
     }
-  
-    ul {
-      position: fixed;
-      top: 80px;
-      right: -100%;
-      background-color: green;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
+
+    .menu li {
+        float: left;
     }
-  
-    ul li {
-      margin: 20px 0;
+
+    .menu a:hover {
+        background-color: transparent;
+        color: var(--black);
+
     }
-  
-    ul li a {
-      font-size: 20px;
+
+    .hamb {
+        display: none;
     }
-  
-    #check:checked ~ ul {
-      right: 0;
-    }
-  }
+}
