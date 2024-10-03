@@ -4,144 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Pessoal Marcus Vinicius</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-  </style>
-  <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
-  <link href="assets/fontawesome/css/brands.css" rel="stylesheet" />
-  <link href="assets/fontawesome/css/solid.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <title>Marcus Vinicius</title>
 </head>
 
 <body>
+  <header id="header" class="header">
+    <nav id="nav">
 
-  <header class="header">
-    <nav id="nav" class="topNav">
-      <ul class="menu">
-        <li class="menu-item"><a href="#aboutme">About Me</a></li>
-        <li class="menu-item"><a href="#experience">Experience</a></li>
-        <li class="menu-item"><a href="#projects">Projects</a></li>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-
+      <ul id="menu">
+        <li class="menu-item"><a href="#">About Me</a></li>
+        <li class="menu-item"><a href="#">Experience</a></li>
+        <li class="menu-item"><a href="#">Projects</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="main">
-    <div></div>
-    <aside class="esquerda">
-      <img src="img/marcus.jpg" alt="Marcus Vinicius">
-
-      <div>
-        <section id="contactme" class="">
-          <article>
-            <h1>Contact Me</h1>
-            <p class="contactme"><i class="fa-solid fa-map-pin fa-xl" style="color: #ffffff;"></i> Brasil / Rio de Janeiro</p>
-            <p class="contactme"><a href="https://www.linkedin.com/in/marcusviniciuscote/"><i class="fa-brands fa-linkedin fa-xl"
-                  style="color: #ffffff;"></i> LinkedIn</a></p>
-            <p class="contactme"><a href="https://github.com/marcusviniciuscote"><i class="fab fa-github fa-xl"
-                  style="color: #ffffff;"></i> GitHub</a></p>
-          </article>
-        </section>
-      </div>
-    </aside>
-
-    <div class="flex-container">
-      <section id="aboutme" class="">
-        <article>
-          <h1><i class="fa-solid fa-user" style="color: #ffffff;"></i> Aboute Me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, inventore mollitia beatae ducimus earum
-            facilis est sunt ipsum praesentium suscipit quis dolores maiores voluptas laborum nam asperiores eaque,
-            veniam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corporis accusantium enim
-            obcaecati, labore libero sit recusandae voluptate animi saepe eveniet, ea quisquam debitis totam iure quia
-            dolorum rem dolorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa porro iure doloremque
-            veritatis doloribus quo, modi voluptate enim neque molestiae fugit explicabo amet exercitationem illo
-            debitis. Dicta voluptates ad optio.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia ipsum ea, nihil aspernatur illum
-            voluptatibus fugiat sequi? Voluptas nihil doloremque sunt quia animi labore, voluptates ducimus alias
-            inventore reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, repellendus
-            cum? Magnam suscipit nostrum harum est explicabo veritatis esse voluptatibus? Perferendis nulla explicabo
-            architecto aspernatur harum soluta atque, ad consectetur?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos porro distinctio explicabo provident
-            reiciendis? Asperiores quasi quod commodi blanditiis, distinctio debitis error dignissimos aut aliquam
-            facere reiciendis veniam nisi eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            similique deserunt illo. Totam voluptas culpa temporibus, distinctio commodi ad quidem, sint labore harum
-            dolores perspiciatis, placeat eos odit necessitatibus praesentium! Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Necessitatibus odio praesentium dolore quos? Ex, nostrum. Nemo maxime eius quia
-            dignissimos voluptatum vitae praesentium, quis beatae magni perferendis a deleniti sint!</p>
-        </article>
-      </section>
-
-      <section id="experience" class="">
-        <article>
-          <h1><i class="fa-solid fa-book-open" style="color: #ffffff;"></i> Experience</h1>
-          <ol class="xp-list">
-            <li class="xp-item">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni quis molestias, rerum non
-                dignissimos omnis rem vero tempora esse, nisi soluta maxime, quasi dolorum? Nemo numquam dicta aut iste.
-              </p>
-            </li>
-            <li class="xp-item">
-              <p>Sint perspiciatis odio esse voluptatibus, fugit nobis ducimus eos maiores veritatis doloribus provident
-                illum molestiae laboriosam enim ad a debitis unde ex odit! Doloremque similique numquam dignissimos,
-                libero laudantium qui.</p>
-            </li>
-            <li class="xp-item">
-              <p>Cum natus dolor nobis mollitia reprehenderit, quaerat dolores! Odio quod impedit, itaque sit facilis,
-                sapiente corporis perspiciatis, ex recusandae sunt culpa quo? Ipsum, exercitationem architecto
-                distinctio
-                eligendi ducimus saepe facere.</p>
-            </li>
-          </ol>
-        </article>
-      </section>
-
-      <section id="projects" class="">
-        <article>
-          <h1><i class="fa-solid fa-computer" style="color: #ffffff;"></i> Projects</h1>
-          <ul class="projects-list">
-            <li class="project-item">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit dolorum corrupti quam culpa vero
-                reiciendis et atque blanditiis molestiae, repellat quae magni ad illum est, similique voluptatum
-                cupiditate ab!</p>
-            </li>
-            <li class="project-item">
-              <p>Commodi voluptatibus beatae provident dolorem perspiciatis vero qui mollitia ab autem, maiores officia
-                delectus ad fugiat veritatis aspernatur odit cumque itaque? A perspiciatis asperiores reiciendis commodi
-                vitae laborum quidem ipsa.</p>
-            </li>
-            <li class="project-item">
-              <p>Veritatis libero sint autem neque est inventore voluptatum nihil aliquid excepturi atque perferendis
-                animi velit commodi optio vitae, nulla enim qui rerum! Doloribus, sit earum suscipit officia illo nulla
-                quasi.</p>
-            </li>
-            <li class="project-item">
-              <p>Praesentium at corporis voluptate commodi officia excepturi? Iure, voluptates eius quis voluptatum illo
-                temporibus quibusdam molestias fugit doloremque, numquam illum vel quisquam cupiditate qui sint velit
-                libero nisi fuga accusantium?</p>
-            </li>
-          </ul>
-        </article>
-      </section>
-    </div>
-  </main>
-
   <script src="js/my.js"></script>
-
 </body>
-
-<footer id="footer" class="">
-  <p><i class="fa-solid fa-map-pin" style="color: #ffffff;"></i> Brasil / Rio de Janeiro</p>
-  <p><a href="https://www.linkedin.com/in/marcusviniciuscote/"><i class="fa-brands fa-linkedin"
-        style="color: #ffffff;"></i> LinkedIn</a></p>
-  <p><a href="https://github.com/marcusviniciuscote"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</a>
-  </p>
-  <p>Developed by Marcus Vinicius</p>
-</footer>
 
 </html>
