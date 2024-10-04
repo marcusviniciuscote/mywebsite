@@ -17,16 +17,29 @@
 
 body {
     background-color: var(--black);
+    color: white;
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+img {
+    border-radius: 50%;
+    max-width: 250px;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 #contactme {
     color: white;
     margin: 50px 0 0 75px;
-    position: fixed;
 }
 
 #contactme h1 {
@@ -36,13 +49,21 @@ body {
 .contactme {
     margin-top: 20px;
 }
-
+#aboutme, #experience, #projects {
+    text-align: justify;
+    width: 800px;
+    margin-top: 150px;
+    margin-left: 25%;
+}
+.aboutme, .experience, .projects {
+    margin-bottom: 50px;
+}
 a {
     text-decoration: none;
     color: white;
 }
 
-ul {
+nav ul {
     list-style: none;
 }
 
@@ -179,13 +200,11 @@ body:has(.side-menu:checked) {
     }
 }
 
-img {
-    border-radius: 50%;
-    max-width: 250px;
-    margin-top: 100px;
-    margin-left: 50px;
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
-.teste {
-    margin-bottom: 100px;
-}
