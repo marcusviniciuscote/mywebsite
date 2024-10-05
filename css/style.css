@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,14 +23,14 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 200px;
 }
+
 h1 {
     margin-bottom: 22px;
-    font-size: 18px;
+    font-size: 22px;
 }
+
 img {
     border-radius: 50%;
     max-width: 250px;
@@ -37,27 +38,6 @@ img {
     margin-left: 50px;
 }
 
-#contactme {
-    color: white;
-    margin: 50px 0 0 75px;
-}
-
-#contactme h1 {
-    font-size: 28px;
-}
-
-.contactme {
-    margin-top: 20px;
-}
-#aboutme, #experience, #projects {
-    text-align: justify;
-    width: 800px;
-    margin-top: 150px;
-    margin-left: 25%;
-}
-.aboutme, .experience, .projects {
-    margin-bottom: 50px;
-}
 a {
     text-decoration: none;
     color: white;
@@ -200,11 +180,38 @@ body:has(.side-menu:checked) {
     }
 }
 
+#contactme {
+    margin-left: 50px;
+}
+
+.socialMedias,
+.socialMedias p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#aboutme,
+#experience,
+#projects {
+    top: 100px;
+    margin-left: 50px;
+    padding-top: 100px;
+    text-align: justify;
+    width: 50%;
+}
+
+#projects {
+    padding-bottom: 200px;
+}
+
 #footer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
+.effect {
+    transition: background-color 0.5s ease-in 0.3s;
+}
